@@ -10,3 +10,4 @@ Currently, two official plugins are available:
 https://www.youtube.com/watch?v=sWVgMcz8Q44 this is the video that i followed
  dont forget to npm install all the node modules
  If you pull this depositary pls run npn run dev 
+ Now this works in the localhost ie http://localhost:5173/ 

@@ -70,6 +70,7 @@ export async function getAccessToken() {
 
         console.log("AccessToken", response.data.access_token);
         sessionStorage.setItem('AccessToken', response.data.access_token);
+        console.log("setting access token",response.data.access_token);
         return response.data.access_token;
 
         } catch (error) {
