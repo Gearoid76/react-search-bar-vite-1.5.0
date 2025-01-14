@@ -1,4 +1,3 @@
-//src/auth.js
 import axios from 'axios';
 
 const client_secret = import.meta.env.VITE_CLIENT_SECRET;
