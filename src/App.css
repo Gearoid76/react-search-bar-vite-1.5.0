@@ -1,0 +1,226 @@
+/*//src/App.css */
+.App {
+  background-color: #eee;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../backgroundImg/pexels-isabella-mendes-107313-860707.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.search-bar-container {
+  padding-top: 20vh;
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px
+}
+/*  Search bar */
+.input-wrapper {
+  background-color: white;
+  width: 100%;
+  border-radius: 10px;
+  height: 2.5rem;
+  padding: 0 15px;
+  box-shadow: 0px 0px 8px #ddd;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  font-size: 1.25rem;
+  width: 100%;
+  margin-left: 5px;
+}
+input:focus {
+  outline: none;
+}
+#search-icon {
+  color: royalblue;
+}
+
+/* SearchResultsList */
+
+.results-list {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 8px #ddd;
+  border-radius: 10px;
+  margin-top: 1rem;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+/* SearchResult */
+
+.search-result {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-result:hover {
+  background-color: #efefef;
+}
+.add-icon {
+  display: flex;
+  justify-content: space-between;
+  color: royalblue;
+}
+.artistNameAndAlbum {
+  padding-left: 2%;
+  align-self: center;
+  
+}
+.playlist-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.playlist-container input {
+  margin-bottom: 10px;
+}
+
+.playlist-container button {
+  background-color: rgb(9, 156, 6);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+.playlist-display {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 8px #ddd;
+  border-radius: 10px;
+}
+/* new playlist shown */
+
+.playlist-display h2 {
+  margin-bottom: 10px;
+}
+
+.playlist-tracks {
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist-track {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  justify-content: space-between;
+}
+
+.playlist-track img {
+  margin-right: 10px;
+}
+h1{
+  padding: 3%;
+}
+.headder {
+  display: flex;
+  background-color: orange;
+  align-items: center;
+  justify-content: center;
+  color: blue; 
+}
+
+.minus-icon {
+  display: flex;
+  color: royalblue;
+}
+.playlist-display {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  img {
+    display: none;
+  }
+  .search-result {
+    font-size: 1rem;
+  }
+  }
+  .footer {
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #eee;
+  }
+  .footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #59573e;
+  }
+  /* Toggle this class - hide and show the popup */
+  .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+  }
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+
+  /* Popup */
+  .popup-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+  }
+  .popup-notification.hidden {
+    opacity: 0;
+  }
+  .popup-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(230, 26, 26, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000; /* Make sure it's on top of other elements */
+}
