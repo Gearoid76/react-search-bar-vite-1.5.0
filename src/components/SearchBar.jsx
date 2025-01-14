@@ -21,6 +21,7 @@ export const SearchBar = ({ setResults }) => {
   
       fetchToken();
   }, []);
+  
   const fetchData = async (value) => {
     console.log("Fetching data for:", value); 
     if (!accessToken) {
