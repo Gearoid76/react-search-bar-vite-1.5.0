@@ -33,7 +33,7 @@ export const SearchResultsList = ({ results, onAddToSpotify }) => {
   React.useEffect(() => {
     console.log('Popup visibility:', showPopup);
     if (showPopup) {
-      const timer = setTimeout(() => setShowPopup(false), 3000); 
+      const timer = setTimeout(() => setShowPopup(false), 5000); 
       return () => clearTimeout(timer);
     }
   }, [showPopup]);
