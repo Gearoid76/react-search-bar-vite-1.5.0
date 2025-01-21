@@ -7,7 +7,7 @@ import '../App.css';
 export const SearchResultsList = ({ results, onAddToSpotify }) => {
   const [selectedTracks, setSelectedTracks] = useState([]);
   const [playlistName, setPlaylistName] = useState('Created from Muusic(k)');
-  const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(true); 
 
   const handleAddTrack = (track) => {
     setSelectedTracks((prevTracks) => [...prevTracks, track]);
@@ -33,7 +33,7 @@ export const SearchResultsList = ({ results, onAddToSpotify }) => {
   React.useEffect(() => {
     console.log('Popup visibility:', showPopup);
     if (showPopup) {
-      const timer = setTimeout(() => setShowPopup(false), 8000);
+      const timer = setTimeout(() => setShowPopup(false), 8000); //was false before
       return () => clearTimeout(timer);
     }
   }, [showPopup]);
