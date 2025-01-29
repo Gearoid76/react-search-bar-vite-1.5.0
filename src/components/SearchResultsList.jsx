@@ -71,7 +71,7 @@ export const SearchResultsList = ({ results, onAddToSpotify }) => {
               </div>
             ))}
           </div>
-              <button className="pushToSpotify.Button" onClick={handlePushToSpotify}>
+              <button className="pushToSpotifyButton" onClick={handlePushToSpotify}>
                 Push to Spotify
               </button>
               {/* Popup notification */}
