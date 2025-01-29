@@ -126,7 +126,6 @@ input:focus {
   display: flex;
   align-items: center;
   padding: 10px;
-  border-bottom: 1px solid #ddd;
   justify-content: space-between;
 }
 
