@@ -13,3 +13,6 @@ https://www.youtube.com/watch?v=sWVgMcz8Q44 this is the video that i followed
  Now this works in the localhost ie http://localhost:5173/ 
 
  this works in only the localhost ie http://localhost:5173
+
+ this is a continuation of the previous version 1.3.0 which i am currently trying to lauch on Github
+ both have the same code, (well almost this is now updated, im using ver 1.3.0 to try and crack the net side of things)
