@@ -18,7 +18,6 @@ export const SearchResultsList = ({ results, onAddToSpotify }) => {
   };
 
   const handlePushToSpotify = () => {
-    // Check if playlist name is provided
     if (!playlistName.trim()) {
       setShowReminder(true);
       return;
@@ -51,9 +50,8 @@ export const SearchResultsList = ({ results, onAddToSpotify }) => {
   }, [showReminder]);
 
   useEffect(() => {
-    // Reset name reminder when user starts typing
     if (playlistName.trim()) {
-      setShowReminder(false);
+      //setShowReminder(false);
     }
   }, [playlistName]);
 
@@ -95,7 +93,6 @@ export const SearchResultsList = ({ results, onAddToSpotify }) => {
             Push to Spotify
           </button>
 
-          {/* Popup notification */}
           {showPopup && (
             <div className="popup-notification">
               Playlist has been pushed to Spotify
