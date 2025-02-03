@@ -215,5 +215,20 @@ h1{
   .popup-notification.hidden {
     opacity: 0;
   }
+  .reminder {
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #c9170e; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  .reminder.hidden {
+    opacity: 0;
+  }
   
 
