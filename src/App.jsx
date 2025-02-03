@@ -1,9 +1,9 @@
-// src/App.jsx
+
 import React, { useState, useEffect } from 'react';
 import { redirectToAuthCodeFlow, getAccessToken } from './auth';
 import { SearchBar } from './components/SearchBar';
 import { SearchResultsList } from './components/SearchResultsList';
-//import Footer from './components/Footer';
+import Footer from './components/Footer';
 import './App.css';
 
 export function App() {
@@ -33,7 +33,7 @@ export function App() {
   const handleAddToPlaylist = (tracks, playlistName) => {
     if (!accessToken) {
       console.error("No access token available");
-      return Promise.reject(new Error("No access token available")); // Return rejected Promise
+      return Promise.reject(new Error("No access token available")); 
     }
   
     // Create a new playlist
@@ -56,7 +56,6 @@ export function App() {
   
         const uris = tracks.map(track => `spotify:track:${track.id}`);
   
-        // Add the tracks to the newly created playlist
         return fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
           method: 'POST',
           headers: {
@@ -101,7 +100,6 @@ export function App() {
                   <div>
                     <h3>{track.name}</h3>
                     <p>{track.artist} - {track.album}</p>
-                    <a href={track.externalUrl} target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
                   </div>
                 </div>
               ))

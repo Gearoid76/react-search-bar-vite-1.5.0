@@ -23,7 +23,7 @@ export const SearchResultsList = ({ results, onAddToSpotify }) => {
       return;
     }
 
-    if (selectedTracks.length > 0) {
+    if (selectedTracks.length === 0) {
       onAddToSpotify(selectedTracks, playlistName)
         .then(() => {
           setSelectedTracks([]); 
@@ -37,7 +37,7 @@ export const SearchResultsList = ({ results, onAddToSpotify }) => {
 
   useEffect(() => {
     if (showPopup) {
-      const timer = setTimeout(() => setShowPopup(false), 7000); 
+      const timer = setTimeout(() => setShowPopup(false), 1000); 
       return () => clearTimeout(timer);
     }
   }, [showPopup]);
@@ -51,7 +51,7 @@ export const SearchResultsList = ({ results, onAddToSpotify }) => {
 
   useEffect(() => {
     if (playlistName.trim()) {
-      //setShowReminder(false);
+      setShowReminder(false);
     }
   }, [playlistName]);
 
