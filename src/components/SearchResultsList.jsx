@@ -23,16 +23,17 @@ export const SearchResultsList = ({ results, onAddToSpotify }) => {
       return;
     }
 
-    if (selectedTracks.length === 0) {
+    if (selectedTracks.length > 0) {
       onAddToSpotify(selectedTracks, playlistName)
         .then(() => {
           setSelectedTracks([]); 
-          setPlaylistName(''); 
+          setPlaylistName('');
+          setShowPopup(true); 
         })
         .catch((error) => {
           console.error('Error pushing to Spotify:', error);
         });
-    } setShowPopup(true); 
+    } 
   };
 
   useEffect(() => {
