@@ -96,7 +96,7 @@ export function App() {
             {playlistTracks.length > 0 ? (
               playlistTracks.map((track, index) => (
                 <div key={index} className="playlist-track">
-                  <img src={track.imageUrl} className="playlist-track-image" alt={track.name} style={{ width: '50px', height: '50px' }} />
+                  <img src={track.imageUrl} className="playlist-track-image" alt={track.name} />
                   <div>
                     <h3>{track.name}</h3>
                     <p>{track.artist} - {track.album}</p>

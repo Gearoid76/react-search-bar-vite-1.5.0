@@ -1,5 +1,6 @@
 /*//src/App.css */
 .App {
+  text-align: center;
   background-color: #eee;
   justify-content: center;
   align-items: center;
@@ -85,7 +86,7 @@ input:focus {
   flex-direction: column;
   margin-top: 10px;
 }
-.playlist-track-image{
+.playlist-track img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -144,6 +145,7 @@ h1{
 }
 .headder {
   display: flex;
+  font-size: 24px;
   background-color: orange;
   align-items: center;
   justify-content: center;
@@ -155,7 +157,12 @@ h1{
   color: royalblue;
 }
 .playlist-display {
-  display: none;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 20px auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 750px) {
@@ -179,8 +186,10 @@ h1{
     font-size: 0.9rem;
     color: #59573e;
   }
-  /* Toggle this class - hide and show the popup */
-  /* Popup */
+  .footer a {
+    color: #eee;
+    text-decoration: none;
+  }
   .popup-notification {
     position: fixed;
     top: 150px;
