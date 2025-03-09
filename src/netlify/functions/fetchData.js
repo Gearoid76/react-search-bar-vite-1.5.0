@@ -1,4 +1,4 @@
-export.handler = async (event) => {
+exports.handler = async (event) => {
     const { playlistId, uris, accessToken } = JSON.parse(event.body);
     const tracks = await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
         method: 'POST',
