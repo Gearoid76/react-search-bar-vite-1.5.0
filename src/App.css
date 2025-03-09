@@ -69,8 +69,8 @@ input:focus {
 }
 
 .results-list::-webkit-scrollbar-track {
-  background: transparent; /* Keeps it invisible */
-  border-radius: 10px; /* Ensures scrollbar container is rounded */
+  background: transparent; 
+  border-radius: 10px; 
 }
 
 /* SearchResult */
