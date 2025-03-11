@@ -58,51 +58,53 @@ export const SearchResultsList = ({ results, onAddToSpotify }) => {
   }, [playlistName]);
 
   return (
-    <div className='results-list'>
-      {results.map((result, id) => (
-        <SearchResult
-          key={id}
-          result={result}
-          onAddTrack={() => handleAddTrack(result)}
-          onRemoveTrack={() => handleRemoveTrack(result)}
-          isSelected={selectedTracks.some(track => track.id === result.id)}
-        />
-      ))}
-
-      {/* Playlist management UI */}
-      {selectedTracks.length > 0 && (
-        <div className="playlist-container">
-          <input
-            type="text"
-            value={playlistName}
-            onChange={(e) => setPlaylistName(e.target.value)}
-            placeholder="Enter playlist name"
+    <div className='results-wrapper'>
+      <div className='results-list'>
+        {results.map((result, id) => (
+          <SearchResult
+            key={id}
+            result={result}
+            onAddTrack={() => handleAddTrack(result)}
+            onRemoveTrack={() => handleRemoveTrack(result)}
+            isSelected={selectedTracks.some(track => track.id === result.id)}
           />
-          {showReminder && <p className="reminder">Please enter a playlist name.</p>}
-          
-          <div className="playlist-tracks">
-            {selectedTracks.map(track => (
-              <div key={track.id} className="playlist-track">
-                <div className='artistNameAndAlbum'>
-                  <h3>{track.name}</h3>
-                  <p>{track.artist} - {track.album}</p>
-                </div>
-                <FaMinus className='minus-icon' onClick={() => handleRemoveTrack(track)} />
-              </div>
-            ))}
-          </div>
-          <button className="pushToSpotifyButton" onClick={handlePushToSpotify}>
-            Push to Spotify
-          </button>
+        ))}
 
-          {/* Popup notification */}
-          {showPopup && (
-            <div className="popup-notification">
-              Playlist has been pushed to Spotify
+        {/* Playlist management UI */}
+        {selectedTracks.length > 0 && (
+          <div className="playlist-container">
+            <input
+              type="text"
+              value={playlistName}
+              onChange={(e) => setPlaylistName(e.target.value)}
+              placeholder="Enter playlist name"
+            />
+            {showReminder && <p className="reminder">Please enter a playlist name.</p>}
+            
+            <div className="playlist-tracks">
+              {selectedTracks.map(track => (
+                <div key={track.id} className="playlist-track">
+                  <div className='artistNameAndAlbum'>
+                    <h3>{track.name}</h3>
+                    <p>{track.artist} - {track.album}</p>
+                  </div>
+                  <FaMinus className='minus-icon' onClick={() => handleRemoveTrack(track)} />
+                </div>
+              ))}
             </div>
-          )}
-        </div>
-      )}
+            <button className="pushToSpotifyButton" onClick={handlePushToSpotify}>
+              Push to Spotify
+            </button>
+
+            {/* Popup notification */}
+            {showPopup && (
+              <div className="popup-notification">
+                Playlist has been pushed to Spotify
+              </div>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

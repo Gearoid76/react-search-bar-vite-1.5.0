@@ -43,8 +43,10 @@ input:focus {
 #search-icon {
   color: royalblue;
 }
-
-/* SearchResultsList */
+.results-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+}
 
 .results-list {
   width: 100%;
@@ -57,7 +59,22 @@ input:focus {
   max-height: 300px;
   overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-gutter: stable both-edges;
 }
+
+.results-list::-webkit-scrollbar {
+  width: 8px; /* Slim scrollbar */
+}
+.results-list::-webkit-scrollbar-track {
+  background: transparent; /* Makes the track invisible */
+  border-radius: 10px;
+}
+.results-list::-webkit-scrollbar-thumb {
+  background: rgb(105, 221, 32); /* Color of scrollbar */
+  border-radius: 10px; /* Matches container */
+  border: 3px solid rgb(105, 221, 32); /* Creates spacing */
+}
+
 
 /* SearchResult */
 
