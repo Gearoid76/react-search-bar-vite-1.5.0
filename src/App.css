@@ -70,9 +70,9 @@ input:focus {
   border-radius: 10px;
 }
 .results-list::-webkit-scrollbar-thumb {
-  background: rgb(105, 221, 32); /* Color of scrollbar */
+  background: orange; /* Color of scrollbar */
   border-radius: 10px; /* Matches container */
-  border: 3px solid rgb(105, 221, 32); /* Creates spacing */
+  border: 3px solid orange; /* Creates spacing */
 }
 
 
