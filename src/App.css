@@ -56,6 +56,7 @@ input:focus {
   margin-top: 1rem;
   max-height: 300px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 /* SearchResult */
