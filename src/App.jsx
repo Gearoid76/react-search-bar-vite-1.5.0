@@ -1,9 +1,9 @@
-// src/App.jsx
+
 import React, { useState, useEffect } from 'react';
 import { redirectToAuthCodeFlow, getAccessToken } from './auth';
 import { SearchBar } from './components/SearchBar';
 import { SearchResultsList } from './components/SearchResultsList';
-//import Footer from './components/Footer';
+//import Footer from './components/Footer'; would like to add 
 import './App.css';
 
 export function App() {
