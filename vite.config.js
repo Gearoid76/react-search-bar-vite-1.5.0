@@ -9,10 +9,16 @@ export default defineConfig({
     removeConsole()
   ],
   build: {
+    target: 'esnext',
+    minify: 'esbuild',
     rollupOptions: {
       output: {
-        manualChunks: {
-          react: ['react', 'react-dom'],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react')) return 'react-vendor';
+            if (id.includes('lodash')) return 'lodash';
+            return 'vendor';
+          }
         },
       },
     },
