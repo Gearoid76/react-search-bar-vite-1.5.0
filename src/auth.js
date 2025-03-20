@@ -49,7 +49,7 @@ export async function generateCodeChallenge(codeVerifier) {
 // Fetch the access token
 export async function getAccessToken() {
     const auth_code = localStorage.getItem('auth_code');
-    const redirectUri = import.meta.env.VITE_REDIRECT_URI;
+    const redirectUri = import.meta.env.VITE_REDIRECT_URI || "https://mususic.netlify.app/callback/";
     const verifier = localStorage.getItem('verifier');
 
     if (!auth_code) {
